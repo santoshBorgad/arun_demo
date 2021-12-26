@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "firstName": "sandip",
+      "lastName": "pune",
+      "contactNumber": "9096698535"
+    },
+    {
+      "firstName": "Santosh",
+      "lastName": "Borgad",
+      "contactNumber": "9093999999",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "firstName": "Santosh",
+      "lastName": "Borgad",
+      "contactNumber": "9096698535",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

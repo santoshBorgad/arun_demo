@@ -1,0 +1,87 @@
+<!-- <p>list works!</p> -->
+<!-- <div *ngIf="loadContent" class="container">
+    <form formGroup]="formGroup" (ngSubmit)="save()" (reset)="resetForm()"> 
+
+        <ng-multiselect-dropdown #multiSelect
+      [placeholder]="'Select City'" 
+      [data]="data" 
+      [formControl]="f.mname" 
+      [settings]="settings"
+      [disabled]="false"
+      [class.is-invalid]="f?.mname?.errors?.required && f?.mname?.touched" 
+      (onFilterChange)="onFilterChange($event)"
+      (onDropDownClose)="onDropDownClose($event)"
+      (onSelect)="onItemSelect($event)" 
+      (onDeSelect)="onDeSelect($event)"
+      (onSelectAll)="onSelectAll($event)"
+      (onDeSelectAll)="onDeSelectAll($event)">
+		</ng-multiselect-dropdown>
+
+        <span *ngIf="f?.mname?.errors?.required && f?.mname?.touched" style="color: red;">
+            City is required
+          </span>
+          <br/> <br/>
+
+          <input type="submit" value="Submit"> | <input type="reset" value="Reset"> | <input type="button" value="Toggle Select All" (click)="multiSelect.toggleSelectAll()">
+
+    </form>
+</div> -->
+
+
+<!-- 
+<html>
+    <head>
+        <title>Form data</title>
+    </head>
+    <body>
+        <form border="1" align="left">
+            <div class="col-md-8">
+             <label>First Name:</label>
+             <input type="text" id="firstName" name="firstName" >
+            </div>
+            <div class="col-md-8">
+                <label>LastName:</label>
+                <input type="text" id="lastName" name="lastName" >
+               </div>
+           <div>
+               <input type="submit" value="submit">
+           </div>
+    </form>
+    </body>
+</html> -->
+
+<div class="col-md-12" style="background-color: brown; border: 15px;">
+<span>sandip</span>
+</div>
+
+<div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <!-- <form #login="ngForm" name="form" (ng-submit)="authenticate(f.value)"> -->
+        <div class="form-group col-md-4">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="objLogin.firstName" aria-describedby="firstName"  placeholder="Enter Name">
+        
+        </div>
+        <div class="form-group col-md-4">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="objLogin.lastName" placeholder="Enter Last Name">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="constactNumber">Constact Number</label>
+            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="objLogin.contactNumber" placeholder="Enter Constact Number" pattern="^(\+?\d{1,4}[\s-])?(?!0+\s+,?$)\d{10}\s*,?$" maxlength="10" minlength="10">
+            <!-- <div *ngIf="f.constactNumber.errors.required">This field is required.</div> -->
+                    <!-- <div *ngIf="f.constactNumber.errors.pattern">Invalid phone number.</div> -->
+          </div>
+
+        
+        <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+      </form>
+</div>
+
+<ul>
+   
+    <!-- <li *ngFor='let obj of userData'>{{obj.id}}-{{obj.name}}-{{obj.city}}</li> -->
+
+    <li *ngFor='let obj of loginArry11'>{{obj.firstName}}-{{obj.lastName}}-{{obj.contactNumber}}</li>
+</ul>
